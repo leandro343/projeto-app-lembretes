@@ -1,17 +1,13 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import LembreteEntrada from './LembreteEntrada';
+import LembreteLista from './LembreteLista';
 
 function App() {
-  const adicionarLembrete = (lembrete) => {
-    console.log(lembrete);
-  };
-
   return (
     <Container className="mt-5">
       <Row>
         <Col className="text-center">
-          <LembreteEntrada onAdd={adicionarLembrete} />
+          <LembreteLista />
         </Col>
       </Row>
     </Container>
