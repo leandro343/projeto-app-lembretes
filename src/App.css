@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+/* Definir estilos base para melhorar o visual geral */
+body {
+  background-color: #f5f7fa;
+  font-family: 'Arial', sans-serif;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Estilizar o título principal */
+h1 {
+  color: #007bff;
+  font-size: 3.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Estilizar os cards */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Estilizar o input de lembretes */
+.input-lembrete {
+  font-size: 1.1rem;
+  padding: 13px;
+  border-radius: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilizar o botão de adicionar lembretes */
+.btn-ok {
+  font-size: 1.2rem;
+  padding: 25px 15;
+  border-radius: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilizar os itens da lista de lembretes */
+.list-group-item {
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.list-group-item:hover {
+  background-color: #74b0ed;
 }

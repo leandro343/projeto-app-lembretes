@@ -1,30 +1,33 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Row, Col } from 'react-bootstrap';
 
-function LembreteEntrada({ onAdd }) {
+function LembreteEntrada({ onAdicionarLembrete }) {
   const [novoLembrete, setNovoLembrete] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (novoLembrete.trim()) {
-      onAdd(novoLembrete);
-      setNovoLembrete('');
-    }
+    onAdicionarLembrete(novoLembrete);
+    setNovoLembrete('');
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Form.Group>
-        <Form.Control
-          type="text"
-          placeholder="Digite seu novo lembrete"
-          value={novoLembrete}
-          onChange={(e) => setNovoLembrete(e.target.value)}
-        />
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        OK
-      </Button>
+    <Form onSubmit={handleSubmit} className="w-100 mt-3">
+      <Row>
+        <Col xs={9}>
+          <Form.Control
+            type="text"
+            placeholder="Digite seu novo lembrete"
+            value={novoLembrete}
+            onChange={(e) => setNovoLembrete(e.target.value)}
+            className="input-lembrete"
+          />
+        </Col>
+        <Col xs={2}>
+          <Button variant="primary" type="submit" block className="btn-ok">
+            OK
+          </Button>
+        </Col>
+      </Row>
     </Form>
   );
 }
